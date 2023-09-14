@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+button{cursor: pointer;}
+
+@font-face {
+    font-family: Netflix-Bold;
+    src: url(../assets/NetflixSans_Bold.woff2);
+}
+@font-face {
+    font-family: Netflix-Medium;
+    src: url(../assets/NetflixSans_Medium.woff2);
+}
+@font-face {
+    font-family: Netflix-Regular;
+    src: url(../assets/NetflixSans_Regular.woff2);
+}
+
+.header{
+    background-image: url(../assets/netflix-hero.jpg);
+    height: 75vh;
+    width: 100vw;
+    background-position: center;
+    /* box-shadow: inset 0 25vh 0 5px rgba(0, 0, 0, .5), inset 0 -25vh 0 5px rgba(0, 0, 0, .5); */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+.title{
+    display: flex;  
+    justify-content: space-around;
+}
+
+.netflix-logo{
+    height: 100px;
+    width: 200px;
+    overflow: hidden;
+    margin-top: -25px;
+    margin-right: 300px;
+}
+
+.netflix-logo img{
+    width: 100%;
+    height: auto;
+}
+
+.title .title-buttons{
+    margin-top: 30px;
+    margin-left: 200px;
+    display: flex;
+    text-align: center;
+}
+
+.title .title-buttons .lang-selection{
+    height: 30px;
+    width: 120px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+    color: white;
+    font-family: Netflix-Regular;
+    font-weight: 200;
+    font-size: 16px;
+    /* -webkit-appearance: none; */
+}
+
+.title .title-buttons .sign-in{
+    height: 30px;
+    width: 80px;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: red;
+    outline: none;
+    color: white;
+    margin-left: 20px;
+    font-family: Netflix-Medium;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 200px;
+}
+
+.hero-content h2{
+    font-family: Netflix-Bold;
+    font-size: 48px;
+}
+
+.hero-content h3{
+    font-family: Netflix-Regular;
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+.hero-content h4{
+    font-family: Netflix-Regular;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+.hero-content .hero-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.hero-content .hero-boxes input{
+    width: 350px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+    color: white;
+    padding-left: 15px;
+}
+
+.hero-content .hero-boxes input::placeholder{
+    font-size: 16px;
+    color: #777;
+}
+
+.hero-content .hero-boxes button{
+    width: 200px;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    font-family: Netflix-Medium;
+    font-size: 25px;
+    font-weight: 200;
+    margin-left: 8px;
+}
+
+.median-bar{
+    width: 100vw;
+    height: 8px;
+    background-color: #232323;
+}
+
+.sec-common{
+    height: 70vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.sec-tv, .sec-mob, .sec-all-device, .sec-children{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-tv h2{
+    font-family: Netflix-Bold;
+    font-size: 48px;
+}
+
+.sec-tv h3{
+    font-family: Netflix-Regular;
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+.sec-tv-media{
+    margin-left: 2%;
+    position: relative;
+    width: 720px;
+    height: 540px;
+}
+
+.sec-tv-media video{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    object-fit: scale-down;
+}
+
+.sec-tv-media img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+.sec-mob-media{
+    position: relative;
+    width: 700px;
+    height: 630px;
+}
+
+.sec-mob-media .mob-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.sec-mob-media .sec-mob-download{
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    background-color: black;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin-left: 140px;
+    margin-top: -140px;
+}
+
+.sec-mob-media .sec-mob-download .thumb{
+    height: 90%;
+    width: 15%;
+    margin-left: 8px;
+    object-fit: contain;
+}
+
+.sec-mob-media .sec-mob-download .download-text{
+    margin-left: 10px;
+}
+
+.sec-mob h2{
+    font-family: Netflix-Bold;
+    font-size: 48px;
+}
+
+.sec-mob h3{
+    font-family: Netflix-Regular;
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+
+.sec-mob-media .sec-mob-download .download-text .downloading{
+    color: rgb(63, 73, 214);
+}
+
+.sec-mob-media .sec-mob-download .download-animation img{
+    height: 48px;
+    width: 48px;
+    margin-left: 120px;
+}
+
+.sec-all-device h2{
+    font-family: Netflix-Bold;
+    font-size: 48px;
+}
+
+.sec-all-device h3{
+    font-family: Netflix-Regular;
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+
+.sec-all-device-media{
+    margin-left: 2%;
+    position: relative;
+    height: 540px;
+    width: 720px;
+}
+
+.sec-all-device-media video{
+    position: absolute;
+    height: 100%;
+    width: 98%;
+    object-fit: scale-down;
+    margin-left: 3px;
+    margin-top: -80px;
+}
+.sec-all-device-media img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+}
+
+.sec-children-media{
+    width: 720px;
+    height: 540px;
+}
+
+.sec-children-text{
+    margin-left: 2%;
+}
+
+.sec-children h2{
+    font-family: Netflix-Bold;
+    font-size: 48px;
+}
+
+.sec-children h3{
+    font-family: Netflix-Regular;
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+
+.sec-faq{
+    flex-direction: column;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* over-riding height property drom sec-common; more contents in this tile */
+    height: 98vh;
+}
+
+.sec-faq h2{
+    font-family: Netflix-Bold;
+    font-size: 48px;
+}
+
+.sec-faq button{
+    height: 10%;
+    width: 78%;
+    margin-top: 10px;
+    background-color: #232323;
+    color: white;
+    font-family: Netflix-Regular;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 25px;
+    border: 1px solid #232323;
+}
+
+.sec-faq button:hover{
+    background-color: #3a3838;
+}
+
+.sec-faq h4{
+    font-family: Netflix-Regular;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 40px;
+}
+
+.sec-faq .faq-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.sec-faq .faq-boxes input{
+    width: 350px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+    color: white;
+    padding-left: 15px;margin-top: 10px;
+}
+
+.sec-faq .faq-boxes input::placeholder{
+    font-size: 16px;
+    color: #777;
+}
+
+.sec-faq .faq-boxes button{
+    width: 200px;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    font-family: Netflix-Medium;
+    font-size: 25px;
+    font-weight: 200;
+    margin-left: 8px;
+}
+
+.sec-faq .expand-1{
+    margin-left: 80%;
+}
+
+.sec-faq .expand-2{
+    margin-left: 69.3%;
+}
+
+
+.sec-faq .expand-3{
+    margin-left: 77%;
+}
+
+
+.sec-faq .expand-4{
+    margin-left: 79%;
+}
+
+
+.sec-faq .expand-5{
+    margin-left: 70%;
+}
+
+
+.sec-faq .expand-6{
+    margin-left: 74%;
+}
+
+/* media-quiries */
+@media (min-width:1445px){
+    .sec-tv-text, .sec-all-device-text{
+        margin-left: 40px;
+    }
+    .sec-children-text{
+        margin-right: 40px;
+    }
+    .sec-all-device-media video{
+        width: 572px;
+        margin-left: 4px;
+        padding-left: 120px;
+    }
+    .hero-content h2 br{
+        display: none;
+    }
+}
+
+@media (max-width:1444px) and (min-width:1200px){
+    .sec-tv-text, .sec-all-device-text{
+        margin-left: 40px;
+    }
+    .sec-children-text{
+        margin-right: 40px;
+    }
+    .sec-all-device-media video{
+        width: 460px;
+        margin-left: 4px;
+        padding-left: 90px;
+        padding-bottom: 40px;
+    }
+    .hero-content h2 br{
+        display: none;
+    }
+}
+
+@media (max-width:1199px) and (min-width:980px){
+    .sec-tv-text, .sec-all-device-text{
+        margin-left: 40px;
+    }
+    .sec-all-device-text{
+        margin-right: 30px;
+    }
+    /* .sec-children-text{
+        margin-right: 40px;
+    } */
+    .sec-all-device-media video{
+        width: 572px;
+        margin-left: 4px;
+        padding-left: 120px;
+    }
+    .hero-content h2 br{
+        display: none;
+    }
+}
+
+@media (max-width:979px){
+    .sec-tv, .sec-mob, .sec-all-device, .sec-children{
+        flex-direction: column;
+    }
+    .sec-common{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+    }
+}
+
+@media (max-width:930px){
+    .sec-tv, .sec-mob, .sec-all-device, .sec-children{
+        flex-direction: column;
+    }
+    .sec-common{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+    }
+    .title-buttons{
+        flex-direction: column;
+    }
+    .sign-in{
+        margin-top: 20px;
+    }
+    
+}
+
+@media (max-width:720px){
+    .sec-tv, .sec-mob, .sec-all-device, .sec-children{
+        flex-direction: column;
+        font-size: small;
+    }
+    .sec-common{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+    }
+    .title-buttons{
+        flex-direction: column;
+    }
+    .sign-in{
+        margin-top: 20px;
+    }
+    
+}
